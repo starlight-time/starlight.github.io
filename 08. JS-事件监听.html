@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS事件</title>
+</head>
+<body>
+  
+  <input type="button" id="btn1" value="点我一下试试1">
+  <input type="button" id="btn2" value="点我一下试试2">
+
+  <script>
+    //事件监听 - addEventListener (可以多次绑定同一事件)
+    document.querySelector('#btn1').addEventListener('click', () => {
+      console.log('试试就试试~~');
+    });
+    document.querySelector('#btn1').addEventListener('click', () => {
+      console.log('试试就试试22~~');
+    });
+
+    //事件绑定-早期写法 - onclick (如果多次绑定同一事件, 覆盖) - 了解
+    document.querySelector('#btn2').onclick =  () => {
+      console.log('试试就试试~~');
+    }
+    document.querySelector('#btn2').onclick =  () => {
+      console.log('试试就试试22~~');
+    }
+  </script>
+</body>
+</html>
